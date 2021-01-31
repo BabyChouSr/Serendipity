@@ -1,0 +1,6 @@
+framework module Pods_Serendipity {
+  umbrella header "Pods-Serendipity-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PEa-os-YZu">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stats View Controller-->
+        <scene sceneID="Nhk-xQ-9dS">
+            <objects>
+                <viewController id="PVo-OF-h8O" customClass="StatsViewController" customModule="Serendipity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="haP-JW-0t0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VhE-Jp-GYf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="1112"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Se-Pi-5kq">
+                                        <rect key="frame" x="0.0" y="-4" width="414" height="1200"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RTX-tL-URV" userLabel="Pie Chart Background">
+                                                <rect key="frame" x="8" y="40" width="406" height="307"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vPE-NO-a8R">
+                                                <rect key="frame" x="7" y="426" width="413" height="341"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSJ-bx-ivI" customClass="LineChartView" customModule="Charts">
+                                                        <rect key="frame" x="21" y="17" width="393" height="324"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dk4-y6-NCB" customClass="PieChartView" customModule="Charts">
+                                                <rect key="frame" x="11" y="58" width="393" height="269"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.49803921569999998" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1200" id="rye-KL-2Ar"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="3Se-Pi-5kq" secondAttribute="bottom" id="6cB-ut-vML"/>
+                                    <constraint firstItem="3Se-Pi-5kq" firstAttribute="top" secondItem="VhE-Jp-GYf" secondAttribute="top" id="LgU-b5-a81"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Se-Pi-5kq" secondAttribute="trailing" id="dhR-bl-Lgd"/>
+                                    <constraint firstItem="3Se-Pi-5kq" firstAttribute="leading" secondItem="VhE-Jp-GYf" secondAttribute="leading" id="lMl-k2-vCm"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2CM-j5-lLR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3Se-Pi-5kq" firstAttribute="width" secondItem="haP-JW-0t0" secondAttribute="width" id="4o0-WX-ni6"/>
+                            <constraint firstItem="VhE-Jp-GYf" firstAttribute="top" secondItem="2CM-j5-lLR" secondAttribute="top" id="9Ao-fy-J3h"/>
+                            <constraint firstItem="VhE-Jp-GYf" firstAttribute="leading" secondItem="2CM-j5-lLR" secondAttribute="leading" id="G4S-rW-DlD"/>
+                            <constraint firstItem="VhE-Jp-GYf" firstAttribute="trailing" secondItem="2CM-j5-lLR" secondAttribute="trailing" id="kIt-4j-6ya"/>
+                            <constraint firstAttribute="bottom" secondItem="VhE-Jp-GYf" secondAttribute="bottom" id="raT-c1-WxB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wIk-p7-oYR"/>
+                    <size key="freeformSize" width="414" height="1200"/>
+                    <connections>
+                        <outlet property="lineChartView" destination="DSJ-bx-ivI" id="czT-M1-dVL"/>
+                        <outlet property="lineGraphBackground" destination="vPE-NO-a8R" id="ngI-gW-VFx"/>
+                        <outlet property="pieChartBackground" destination="RTX-tL-URV" id="QBr-a8-KkM"/>
+                        <outlet property="pieChartView" destination="Dk4-y6-NCB" id="pjN-XD-oax"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wkc-1e-frn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1142.5233644859813" y="130.23758099352054"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6jC-ef-oTU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PEa-os-YZu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="bar-chart-2" id="wC0-ch-10D"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mjk-s5-gVH">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.49803921569999998" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PVo-OF-h8O" kind="relationship" relationship="rootViewController" id="53C-3n-OCC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UbD-qo-O4u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234.78260869565219" y="130.58035714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bar-chart-2" width="20" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
