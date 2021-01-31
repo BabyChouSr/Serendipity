@@ -1,3 +1,4 @@
+# Serendipity
 ## Problem
 As high school students, we have experienced all-too-human emotional outbreaks and depressive episodes; Kevin sleeping only 4 hours per day because of insomnia, Akshay gaining 12 pounds in a week, and Christopher suffering from impulse control disorder and test anxiety. We realized that depression is an extremely complex, nuanced issue that is hard to speak about to others. Sometimes, we don't know what's wrong. It's this fear about the unknown that we have to grapple with and we are unable to capture these feelings in front of counselors we've never met before. But, it's not just us. Over 300 million people worldwide suffer from depression with women twice as likely to have it. That's why we present Serendipity, an application that allows you to understand your feelings, problems, and maybe even something serendipitous.
 
