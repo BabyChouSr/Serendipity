@@ -9,7 +9,9 @@ Our primary target market is young adults in secondary school and university. Be
 Serendipity has three major features to improve mental health around the world. We first utilize a biometric encryption algorithm that authenticates users based on FaceID to ensure the privacy of the usage of Serendipity. Each user is then authenticated through Google's Firebase, receiving a personalized experience and the ability to review past reports.
 
 Anxiety Tracker - Our mobile app utilizes a sentiment analyzer and natural language processing based on the VADER Lexicon to detect the polarity of the speech from the transcript sent in through the records. Our iOS application first records the user's speech and then creates a request that is sent to a REST API with the output being the anxiety level of the user. 
+
 Depression Self-Test - The transcript is also sent to our REST API's depression detection function which provides an early-stage diagnosis of whether the user is depressed or not. We detect depression utilizing a Bidirectional LSTM Neural Network with GloVe Embeddings which is trained over 200,000 tweets on Twitter. 
+
 Pure Serendipity - The user is able to log down their activities and mood levels and the app, using correlative analysis, will automatically show the top activities that make them happy and excited. Who knows? You might be able to find your own serendipity of hobbies and fun that you can enjoy!
 
 ## Marketing Channels
